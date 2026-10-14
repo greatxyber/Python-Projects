@@ -1,0 +1,14 @@
+def comma_code(items):
+    if len(items) == 0:
+        return ""
+    elif len(items) == 1:
+        return items[0]
+    else:
+        result = ""
+        for i in range(len(items) - 1):
+            result += items[i] + ", "
+        result += "and " + items[-1]
+        return result
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+print(comma_code(spam))
